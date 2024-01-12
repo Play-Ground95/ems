@@ -23,7 +23,7 @@ public class Employee {
     private String email;
     @NotBlank
     private String mobile;
-    @NotBlank
+
     private String userType;
     @NotBlank
     private String branch;

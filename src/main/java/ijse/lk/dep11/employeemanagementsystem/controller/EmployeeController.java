@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/employees")
+@RequestMapping
 public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @PostMapping
+    @PostMapping("/enroll")
     public ResponseEntity<String> enrollEmployee(@RequestBody Employee employee) {
         Employee enrolledEmployee = employeeService.createEmployee(employee);
         return ResponseEntity.ok("Employee enrolled successfully with ID: " + enrolledEmployee.getId());
